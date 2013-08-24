@@ -55,7 +55,7 @@ $doctype = $OUTPUT->doctype() ?>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#"><?php echo $PAGE->title; ?></a>
+              <a class="navbar-brand" href="<?php echo $CFG->wwwroot;?>"><?php echo $SITE->shortname; ?></a>
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">

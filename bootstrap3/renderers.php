@@ -44,55 +44,6 @@ class theme_bootstrap3_core_renderer extends core_renderer {
         return $navbarcontent;
     }
 
-    public function custom_menu($custommenuitems = '') {
-        global $CFG;
-
-        $custommenuitems = get_string('home', 'theme_bootstrap3')."|" . $CFG->wwwroot . "\n";
-
-        if (!empty($CFG->custommenuitems)) {
-            $custommenuitems .= $CFG->custommenuitems;
-        }
-
-        $custommenu = new custom_menu($custommenuitems, current_language());
-        return $this->render_custom_menu($custommenu);
-    }
-	
-    protected function render_custom_menu_item(custom_menu_item $menunode) {
-        static $submenucount = 0;
-
-        if ($menunode->has_children()) {
-            $content = html_writer::start_tag('li', array('class'=>'dropdown'));
-            $submenucount++;
-            if ($menunode->get_url() !== null) {
-                $url = $menunode->get_url();
-            } else {
-                $url = '#cm_submenu_'.$submenucount;
-            }
-			
-            $content .= html_writer::start_tag('a', array('href'=>$url,'class'=>'dropdown-toggle','data-toggle'=>'dropdown'));
-            $content .= $menunode->get_title();
-            $content .= html_writer::start_tag('b', array('class'=>'caret'));
-            $content .= html_writer::end_tag('b');
-            $content .= html_writer::end_tag('a');
-            $content .= html_writer::start_tag('ul', array('class'=>'dropdown-menu'));
-            foreach ($menunode->get_children() as $menunode) {
-                $content .= $this->render_custom_menu_item($menunode);
-            }
-            $content .= html_writer::end_tag('ul');
-        } else {
-            $content = html_writer::start_tag('li');
-
-            if ($menunode->get_url() !== null) {
-                $url = $menunode->get_url();
-            } else {
-                $url = '#';
-            }
-            $content .= html_writer::link($url, $menunode->get_text(), array('title'=>$menunode->get_title()));
-        }
-        $content .= html_writer::end_tag('li');
-        return $content;
-    }
-
     static $icons = array(
             'docs' => 'question-sign',
             'book' => 'book',
