@@ -57,49 +57,6 @@ class theme_bootstrap3_core_renderer extends core_renderer {
         return $this->render_custom_menu($custommenu);
     }
 	
-    protected function render_custom_menu(custom_menu $menu){
-        global $OUTPUT, $USER, $PAGE;
-        if (!$menu->has_children()){
-            return '';
-        }
-        $menupos = 3;
-        if (is_siteadmin($USER)){
-			//
-        }
-        $menu->add(get_string('linkweb', 'theme_bootstrap3'), new moodle_url('http://spaceweb.me/proyectos/luismiguelgarrido/web/', array('sesskey' =>  sesskey())), null, $menupos++);
-        
-		$content = html_writer::start_tag('div',array('class'=>"navbar navbar-default navbar-fixed-top"));
-        $content .= html_writer::start_tag('div',array('class'=>"container"));
-        
-		$content .= html_writer::start_tag('div',array('class'=>"navbar-header"));
-        $content .= html_writer::start_tag('button',array('type'=>"button",'class'=>"navbar-toggle",'data-toggle'=>"collapse",'data-target'=>".navbar-collapse"));
-        $content .= html_writer::tag('span', '',array('class'=>'icon-bar'));
-        $content .= html_writer::tag('span', '',array('class'=>'icon-bar'));
-        $content .= html_writer::tag('span', '',array('class'=>'icon-bar'));
-        $content .= html_writer::end_tag('button');
-        $content .= html_writer::start_tag('a',array('class'=>'navbar-brand'));
-        $content .= 'Moodle';
-        $content .= html_writer::end_tag('a');
-        $content .= html_writer::end_tag('div'); //navbar-header
-		
-        $content .= html_writer::start_tag('div', array('class'=>'navbar-collapse collapse'));
-	    $content .= html_writer::start_tag('ul', array('class'=>'nav navbar-nav'));
-		foreach ($menu->get_children() as $item) {
-            $content .= $this->render_custom_menu_item($item);
-        }
-        $content .= html_writer::end_tag('ul');
-		
-	    $content .= html_writer::start_tag('ul', array('class'=>'nav navbar-nav pull-right'));
-		$content .= $this->login_info();
-        $content .= html_writer::end_tag('ul');
-		
-		
-        $content .= html_writer::end_tag('div');
-        $content .= html_writer::end_tag('div');// container
-        $content .= html_writer::end_tag('div');// navbar
-        return $content;
-    }
-	
     protected function render_custom_menu_item(custom_menu_item $menunode) {
         static $submenucount = 0;
 

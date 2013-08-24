@@ -46,13 +46,28 @@ $doctype = $OUTPUT->doctype() ?>
     <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
 		<?php echo $OUTPUT->standard_top_of_body_html() ?>
         
-        <?php if ($hascustommenu) { ?>
-            <div id="custommenuwrap">
-                <nav id="custommenu">
-                    <?php echo $custommenu; ?>
-                </nav>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><?php echo $PAGE->title; ?></a>
             </div>
-        <?php } ?>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="./">Inicio</a></li>
+                <li><a href="http://lmgarrido.es/">Página Web</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><?php echo $OUTPUT->login_info() ?></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
         
         <div id="page" class="container">
         
