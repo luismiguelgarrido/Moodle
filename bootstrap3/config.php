@@ -17,12 +17,10 @@ $THEME->parents = array(
 $THEME->parents_exclude_sheets = array('base'=>array('pagelayout'));
 
 $THEME->sheets = array(
-    'bootstrap',
-    'bootstrap_buttons',
-    'bootstrap-glyphicons',
+    'bootstrap-buttons',
     'bootstrap-select.min',
     'jquery-selectBoxIt',
-    'bootstrap_custom',
+    'bootstrap-custom',
     'extra',
     'quiz',
     'moddata'

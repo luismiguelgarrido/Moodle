@@ -114,7 +114,7 @@ class theme_bootstrap3_core_renderer extends core_renderer {
 
     protected static function icon($name, $text=null) {
         if (!$text) {$text = $name;}
-        return "<i class=icon-$name></i>";
+		return "<i class='glyphicon glyphicon-$name'></i>";
     }
     protected static function moodle_icon($name) {
         return self::icon(self::$icons[$name]);

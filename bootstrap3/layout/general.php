@@ -39,6 +39,8 @@ $doctype = $OUTPUT->doctype() ?>
         <meta name="description" content="<?php p(strip_tags(format_text($SITE->summary, FORMAT_HTML))) ?>" />
         <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://lmgarrido.es/moodle/theme/bootstrap3/style/bootstrap.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="http://lmgarrido.es/moodle/theme/bootstrap3/style/bootstrap-theme.css" rel="stylesheet" media="screen">
         <?php echo $OUTPUT->standard_head_html() ?>
         <?php include($CFG->dirroot . "/theme/bootstrap3/layout/analytics.php"); ?>
     </head>
@@ -59,7 +61,7 @@ $doctype = $OUTPUT->doctype() ?>
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="./">Inicio</a></li>
+                <li><a href="./">Inicio</a></li>
                 <li><a href="http://lmgarrido.es/">Página Web</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">

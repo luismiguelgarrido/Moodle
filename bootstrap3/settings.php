@@ -18,20 +18,6 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_heading($name, $heading, $information);
     $settings->add($setting);
 	
-	$name = 'theme_bootstrap3/enablejquery';
-    $title = get_string('enablejquery','theme_bootstrap3');
-    $description = get_string('enablejquerydesc', 'theme_bootstrap3');
-    $default = '1';
-    $setting = new admin_setting_configcheckbox($name, $title, $description, $default);
-    $settings->add($setting);
-    
-    $name = 'theme_bootstrap3/enableglyphicons';
-    $title = get_string('enableglyphicons','theme_bootstrap3');
-    $description = get_string('enableglyphiconsdesc', 'theme_bootstrap3');
-    $default = '0';
-    $setting = new admin_setting_configcheckbox($name, $title, $description, $default);
-    $settings->add($setting);
-	
 	$name = 'theme_bootstrap3/logo_url';
     $title = get_string('logo_url','theme_bootstrap3');
     $description = get_string('logo_urldesc', 'theme_bootstrap3');
