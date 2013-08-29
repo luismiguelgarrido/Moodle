@@ -17,5 +17,5 @@ Inicia moodle y actualiza la base de datos con los nuevos componentes.<br>
 
 ----
 <a href="http://lmgarrido.es">Visita nuestra web</a><br>
-<a href="http://lmg.comeze.com">Visita la DEMO Moodle1</a>
+<a href="http://lmg.comeze.com">Visita la DEMO Moodle1</a><br>
 <a href="http://lmgarrido.es/moodle/">Visita la DEMO Moodle2</a>
