@@ -1,4 +1,4 @@
-moodle
+Moodle
 ======
 
 Plantilla Moodle2 Bootstrap 3<br>
@@ -8,12 +8,14 @@ Theme realizada con el Framework Bootstrap 3.<br>
 Incluido sistema HTML5 Responsive.<br>
 Incluidos todos los nuevos plugins de Bootstrap 3.<br>
 
+
 ----
 Descarga la plantilla.<br>
 Sube por FTP la plantilla a la carpeta /theme/.<br>
-Inicia moodle y actualiza la base de datos con los componentes nuevos.<br>
+Inicia moodle y actualiza la base de datos con los nuevos componentes.<br>
 
 
 ----
 <a href="http://lmgarrido.es">Visita nuestra web</a><br>
-<a href="http://lmgarrido.es/moodle/">Visita la DEMO Moodle</a>
+<a href="http://lmg.comeze.com">Visita la DEMO Moodle1</a>
+<a href="http://lmgarrido.es/moodle/">Visita la DEMO Moodle2</a>
