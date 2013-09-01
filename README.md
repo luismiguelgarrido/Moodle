@@ -4,6 +4,7 @@ Moodle
 Plantilla Moodle2 Bootstrap 3<br>
 
 Nueva plantilla para moodle versiones: 2, 2.1, 2.2, 2.3, 2.4, 2.5.<br>
+También para versiones de Moodle 1.x. <br>
 Theme realizada con el Framework Bootstrap 3.<br>
 Incluido sistema HTML5 Responsive.<br>
 Incluidos todos los nuevos plugins de Bootstrap 3.<br>
